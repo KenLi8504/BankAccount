@@ -13,17 +13,16 @@ public class BankAccount{
     return accountID;
   }
 
-  public double ReturnBal () {
+  public double GetBalance() {
     return balance;
   }
 
-  public String SetPassword (String NewPassword){
-    password = NewPassword;
-    return "Your new password is " + NewPassword;
+  public void setPassword (String NewPass){
+    password = NewPass;
   }
 
   public boolean deposit(double amount){
-    if (amount >= 0){
+    if (amount > 0){
       balance = balance + amount;
       return true;
     }
